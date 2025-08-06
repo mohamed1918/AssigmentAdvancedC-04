@@ -22,18 +22,33 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q2
-            Hashtable vaules = new Hashtable { {"mohammed",21 }, { "mohaned", 18 } , { "mariam", 13 } };
-            string maxKey = "";
-            int maxValue = int.MinValue;
-            foreach (DictionaryEntry entry in vaules)
+            //Hashtable vaules = new Hashtable { {"mohammed",21 }, { "mohaned", 18 } , { "mariam", 13 } };
+            //string maxKey = "";
+            //int maxValue = int.MinValue;
+            //foreach (DictionaryEntry entry in vaules)
+            //{
+            //    if ((int)entry.Value > maxValue)
+            //    {
+            //        maxValue = (int)entry.Value;
+            //        maxKey = (string)entry.Key;
+            //    }
+            //}
+            //Console.WriteLine($"Key with max value: {maxKey} with value: {maxValue}");
+            #endregion
+
+            #region Q3
+            Hashtable fruits = new Hashtable { { "key1", "apple" }, { "key2", "banana" }, { "key3", "apple" } };
+            string targetValue = "apple";
+            bool found = false;
+            foreach (DictionaryEntry entry in fruits)
             {
-                if ((int)entry.Value > maxValue)
+                if ((string)entry.Value == targetValue)
                 {
-                    maxValue = (int)entry.Value;
-                    maxKey = (string)entry.Key;
+                    Console.WriteLine(entry.Key);
+                    found = true;
                 }
             }
-            Console.WriteLine($"Key with max value: {maxKey} with value: {maxValue}");
+            if (!found) Console.WriteLine("Key not found");
             #endregion
         }
     }
