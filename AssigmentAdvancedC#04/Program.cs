@@ -81,15 +81,22 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q7
-            SortedList<int, string> employees = new SortedList<int, string>
-            {
-                { 1, "moammed" },
-                { 3, "Mohanand" },
-                { 2, "mariam" }
-            };
-            Console.WriteLine("\nEmployees:");
-            foreach (var emp in employees)
-                Console.WriteLine($"{emp.Key}: {emp.Value}");
+            //SortedList<int, string> employees = new SortedList<int, string>
+            //{
+            //    { 1, "moammed" },
+            //    { 3, "Mohanand" },
+            //    { 2, "mariam" }
+            //};
+            //Console.WriteLine("\nEmployees:");
+            //foreach (var emp in employees)
+            //    Console.WriteLine($"{emp.Key}: {emp.Value}");
+            #endregion
+
+            #region Q8
+            int N = 10;
+            int[] nums = { 1, 2, 4, 5, 7, 9 };
+            var missing = Enumerable.Range(1, N).Except(nums);
+            Console.WriteLine("\nMissing numbers: " + string.Join(", ", missing));
             #endregion
         }
     }
