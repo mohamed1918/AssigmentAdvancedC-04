@@ -52,11 +52,18 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q4
-            string[] words = { "eat", "tea", "tan", "ate", "nat", "bat" };
-            var groups = words.GroupBy(w => String.Concat(w.OrderBy(c => c)));
-            Console.WriteLine("\nAnagram Groups:");
-            foreach (var group in groups)
-                Console.WriteLine(string.Join(", ", group));
+            //string[] words = { "eat", "tea", "tan", "ate", "nat", "bat" };
+            //var groups = words.GroupBy(w => String.Concat(w.OrderBy(c => c)));
+            //Console.WriteLine("\nAnagram Groups:");
+            //foreach (var group in groups)
+            //    Console.WriteLine(string.Join(", ", group));
+            #endregion
+
+            #region Q5
+            int[] arr = { 1, 2, 3, 4, 5, 4 };
+            bool hasDuplicates = arr.Length != arr.Distinct().Count();
+            Console.WriteLine($"Array has duplicates: {hasDuplicates}");
+
             #endregion
         }
     }
