@@ -123,13 +123,20 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q12
-            Dictionary<string, int> dict = new Dictionary<string, int>
-            {
-                { "apple", 1 }, { "animal", 2 }, { "airport", 3 }, { "banana", 4 }
-            };
-            char targetChar = 'a';
-            int count = dict.Keys.Count(k => k.StartsWith(targetChar.ToString()));
-            Console.WriteLine($"\nKeys starting with '{targetChar}': {count}");
+            //Dictionary<string, int> dict = new Dictionary<string, int>
+            //{
+            //    { "apple", 1 }, { "animal", 2 }, { "airport", 3 }, { "banana", 4 }
+            //};
+            //char targetChar = 'a';
+            //int count = dict.Keys.Count(k => k.StartsWith(targetChar.ToString()));
+            //Console.WriteLine($"\nKeys starting with '{targetChar}': {count}");
+            #endregion
+
+            #region Q13
+            SortedSet<int> sortedSet = new SortedSet<int> { 1, 3, 5, 7, 9 };
+            int target = 4;
+            List<int> greaterList = sortedSet.Where(x => x > target).ToList();
+            Console.WriteLine("\nElements greater than target: " + string.Join(", ", greaterList));
             #endregion
         }
     }
