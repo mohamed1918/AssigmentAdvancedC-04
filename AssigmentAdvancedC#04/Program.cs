@@ -93,10 +93,16 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q8
-            int N = 10;
-            int[] nums = { 1, 2, 4, 5, 7, 9 };
-            var missing = Enumerable.Range(1, N).Except(nums);
-            Console.WriteLine("\nMissing numbers: " + string.Join(", ", missing));
+            //int N = 10;
+            //int[] nums = { 1, 2, 4, 5, 7, 9 };
+            //var missing = Enumerable.Range(1, N).Except(nums);
+            //Console.WriteLine("\nMissing numbers: " + string.Join(", ", missing));
+            #endregion
+
+            #region Q9
+            List<int> listWithDuplicates = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
+            HashSet<int> uniqueSet = new HashSet<int>(listWithDuplicates);
+            Console.WriteLine("\nUnique values: " + string.Join(", ", uniqueSet));
             #endregion
         }
     }
