@@ -100,9 +100,19 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q9
-            List<int> listWithDuplicates = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
-            HashSet<int> uniqueSet = new HashSet<int>(listWithDuplicates);
-            Console.WriteLine("\nUnique values: " + string.Join(", ", uniqueSet));
+            //List<int> listWithDuplicates = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
+            //HashSet<int> uniqueSet = new HashSet<int>(listWithDuplicates);
+            //Console.WriteLine("\nUnique values: " + string.Join(", ", uniqueSet));
+            #endregion
+
+            #region Q10
+            Hashtable original = new Hashtable { { "A", 1 }, { "B", 2 }, { "C", 3 } };
+            Hashtable swapped = new Hashtable();
+            foreach (DictionaryEntry entry in original)
+                swapped[entry.Value] = entry.Key;
+            Console.WriteLine("\nSwapped Hashtable:");
+            foreach (DictionaryEntry entry in swapped)
+                Console.WriteLine($"{entry.Key}: {entry.Value}");
             #endregion
         }
     }
