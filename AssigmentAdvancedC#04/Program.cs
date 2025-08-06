@@ -106,13 +106,20 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q10
-            Hashtable original = new Hashtable { { "A", 1 }, { "B", 2 }, { "C", 3 } };
-            Hashtable swapped = new Hashtable();
-            foreach (DictionaryEntry entry in original)
-                swapped[entry.Value] = entry.Key;
-            Console.WriteLine("\nSwapped Hashtable:");
-            foreach (DictionaryEntry entry in swapped)
-                Console.WriteLine($"{entry.Key}: {entry.Value}");
+            //Hashtable original = new Hashtable { { "A", 1 }, { "B", 2 }, { "C", 3 } };
+            //Hashtable swapped = new Hashtable();
+            //foreach (DictionaryEntry entry in original)
+            //    swapped[entry.Value] = entry.Key;
+            //Console.WriteLine("\nSwapped Hashtable:");
+            //foreach (DictionaryEntry entry in swapped)
+            //    Console.WriteLine($"{entry.Key}: {entry.Value}");
+            #endregion
+
+            #region Q11
+            HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
+            HashSet<int> set2 = new HashSet<int> { 3, 4, 5 };
+            set1.UnionWith(set2);
+            Console.WriteLine("\nUnion: " + string.Join(", ", set1));
             #endregion
         }
     }
