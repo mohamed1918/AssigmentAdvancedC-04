@@ -37,18 +37,26 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q3
-            Hashtable fruits = new Hashtable { { "key1", "apple" }, { "key2", "banana" }, { "key3", "apple" } };
-            string targetValue = "apple";
-            bool found = false;
-            foreach (DictionaryEntry entry in fruits)
-            {
-                if ((string)entry.Value == targetValue)
-                {
-                    Console.WriteLine(entry.Key);
-                    found = true;
-                }
-            }
-            if (!found) Console.WriteLine("Key not found");
+            //Hashtable fruits = new Hashtable { { "key1", "apple" }, { "key2", "banana" }, { "key3", "apple" } };
+            //string targetValue = "apple";
+            //bool found = false;
+            //foreach (DictionaryEntry entry in fruits)
+            //{
+            //    if ((string)entry.Value == targetValue)
+            //    {
+            //        Console.WriteLine(entry.Key);
+            //        found = true;
+            //    }
+            //}
+            //if (!found) Console.WriteLine("Key not found");
+            #endregion
+
+            #region Q4
+            string[] words = { "eat", "tea", "tan", "ate", "nat", "bat" };
+            var groups = words.GroupBy(w => String.Concat(w.OrderBy(c => c)));
+            Console.WriteLine("\nAnagram Groups:");
+            foreach (var group in groups)
+                Console.WriteLine(string.Join(", ", group));
             #endregion
         }
     }
