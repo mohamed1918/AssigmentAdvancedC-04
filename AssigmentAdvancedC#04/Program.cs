@@ -133,10 +133,19 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q13
-            SortedSet<int> sortedSet = new SortedSet<int> { 1, 3, 5, 7, 9 };
-            int target = 4;
-            List<int> greaterList = sortedSet.Where(x => x > target).ToList();
-            Console.WriteLine("\nElements greater than target: " + string.Join(", ", greaterList));
+            //SortedSet<int> sortedSet = new SortedSet<int> { 1, 3, 5, 7, 9 };
+            //int target = 4;
+            //List<int> greaterList = sortedSet.Where(x => x > target).ToList();
+            //Console.WriteLine("\nElements greater than target: " + string.Join(", ", greaterList));
+            #endregion
+
+            #region Q14
+            SortedList<int, int> sl = new SortedList<int, int>
+            {
+                {1, 11}, {2, 14}, {3, 17}, {4, 20}
+            };
+            var evenKeys = sl.Where(kv => kv.Value % 2 == 0).Select(kv => kv.Key);
+            Console.WriteLine("\nKeys with even values: " + string.Join(", ", evenKeys));
             #endregion
         }
     }
