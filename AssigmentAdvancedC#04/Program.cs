@@ -116,10 +116,20 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q11
-            HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
-            HashSet<int> set2 = new HashSet<int> { 3, 4, 5 };
-            set1.UnionWith(set2);
-            Console.WriteLine("\nUnion: " + string.Join(", ", set1));
+            //HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
+            //HashSet<int> set2 = new HashSet<int> { 3, 4, 5 };
+            //set1.UnionWith(set2);
+            //Console.WriteLine("\nUnion: " + string.Join(", ", set1));
+            #endregion
+
+            #region Q12
+            Dictionary<string, int> dict = new Dictionary<string, int>
+            {
+                { "apple", 1 }, { "animal", 2 }, { "airport", 3 }, { "banana", 4 }
+            };
+            char targetChar = 'a';
+            int count = dict.Keys.Count(k => k.StartsWith(targetChar.ToString()));
+            Console.WriteLine($"\nKeys starting with '{targetChar}': {count}");
             #endregion
         }
     }
