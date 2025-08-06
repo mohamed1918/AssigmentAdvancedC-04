@@ -60,10 +60,24 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q5
-            int[] arr = { 1, 2, 3, 4, 5, 4 };
-            bool hasDuplicates = arr.Length != arr.Distinct().Count();
-            Console.WriteLine($"Array has duplicates: {hasDuplicates}");
+            //int[] arr = { 1, 2, 3, 4, 5, 4 };
+            //bool hasDuplicates = arr.Length != arr.Distinct().Count();
+            //Console.WriteLine($"Array has duplicates: {hasDuplicates}");
 
+            #endregion
+
+            #region Q6
+            SortedDictionary<int, string> students = new SortedDictionary<int, string>();
+            students.Add(101, "mohammed");
+            students.Add(102, "mohanand");
+            students.Add(103, "mariam");
+            Console.WriteLine("\nStudents:");
+            foreach (var s in students)
+                Console.WriteLine($"{s.Key}: {s.Value}");
+            students.Remove(102);
+            Console.WriteLine("After removing ID 102:");
+            foreach (var s in students)
+                Console.WriteLine($"{s.Key}: {s.Value}");
             #endregion
         }
     }
