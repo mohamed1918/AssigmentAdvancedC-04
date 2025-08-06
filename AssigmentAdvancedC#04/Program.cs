@@ -67,17 +67,29 @@ namespace AssigmentAdvancedC_04
             #endregion
 
             #region Q6
-            SortedDictionary<int, string> students = new SortedDictionary<int, string>();
-            students.Add(101, "mohammed");
-            students.Add(102, "mohanand");
-            students.Add(103, "mariam");
-            Console.WriteLine("\nStudents:");
-            foreach (var s in students)
-                Console.WriteLine($"{s.Key}: {s.Value}");
-            students.Remove(102);
-            Console.WriteLine("After removing ID 102:");
-            foreach (var s in students)
-                Console.WriteLine($"{s.Key}: {s.Value}");
+            //SortedDictionary<int, string> students = new SortedDictionary<int, string>();
+            //students.Add(101, "mohammed");
+            //students.Add(102, "mohanand");
+            //students.Add(103, "mariam");
+            //Console.WriteLine("\nStudents:");
+            //foreach (var s in students)
+            //    Console.WriteLine($"{s.Key}: {s.Value}");
+            //students.Remove(102);
+            //Console.WriteLine("After removing ID 102:");
+            //foreach (var s in students)
+            //    Console.WriteLine($"{s.Key}: {s.Value}");
+            #endregion
+
+            #region Q7
+            SortedList<int, string> employees = new SortedList<int, string>
+            {
+                { 1, "moammed" },
+                { 3, "Mohanand" },
+                { 2, "mariam" }
+            };
+            Console.WriteLine("\nEmployees:");
+            foreach (var emp in employees)
+                Console.WriteLine($"{emp.Key}: {emp.Value}");
             #endregion
         }
     }
